@@ -1,0 +1,13 @@
+*.class
+*.log
+*.lock
+
+# idea 
+.idea/
+*.iml
+
+### IntelliJ IDEA ###
+*.iml
+*.ipr
+*.iws
+*.idea
