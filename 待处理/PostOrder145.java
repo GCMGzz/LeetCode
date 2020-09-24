@@ -11,23 +11,24 @@ public class PostOrder145 {
             val = x;
         }
     }
-// 递归
-        List<Integer> ans = new ArrayList<>();
 
-        public List<Integer> postorderTraversal(TreeNode root) {
-            return postOrder(root);
-        }
+    // 递归
+    List<Integer> ans = new ArrayList<>();
 
-        public List<Integer> postOrder(TreeNode root) {
-            if (root == null) {
-                return ans;
-            }
-            postOrder(root.left);
-            postOrder(root.right);
-            ans.add(root.val);
+    public List<Integer> postorderTraversal(TreeNode root) {
+        return postOrder(root);
+    }
+
+    public List<Integer> postOrder(TreeNode root) {
+        if (root == null) {
             return ans;
         }
-
-   // 迭代
+        postOrder(root.left);
+        postOrder(root.right);
+        ans.add(root.val);
+        return ans;
     }
+
+    // 迭代
+}
 
