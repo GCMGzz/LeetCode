@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * @ author  wilbur
@@ -9,6 +10,7 @@ import java.util.Arrays;
  */
 public class FindErrorNums645 {
     public int[] findErrorNums(int[] nums) {
+
         Arrays.sort(nums);
         int dup = -1, missing = 1;
         for (int i = 1; i < nums.length; i++) {
@@ -19,4 +21,6 @@ public class FindErrorNums645 {
         }
         return new int[] {dup, nums[nums.length - 1] != nums.length ? nums.length : missing};
     }
+
+
 }
