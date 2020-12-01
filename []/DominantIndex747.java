@@ -30,4 +30,28 @@ public class DominantIndex747 {
 
     }
     //直接比较第二大的数和最大数是否满足题意
+    public int dominantIndex2(int[] nums) {
+        int firstMax = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+        int firstIndex = -1;
+        int secondIndex = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] > firstMax) {
+                secondMax = firstMax;
+                secondIndex = firstIndex;
+                firstMax = nums[i];
+                firstIndex = i;
+            }else if(nums[i] > secondMax) {
+                secondMax = nums[i];
+                secondIndex = i;
+            }
+        }
+        if(secondMax * 2 <= firstMax) {
+            return firstIndex;
+        }else {
+            return -1;
+        }
+    }
+
+
 }
