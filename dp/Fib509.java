@@ -7,12 +7,23 @@
  * @解题思路  递归
  */
 public class Fib509 {
-    public int fib(int N) {
+    //递归
+    public int fib1(int N) {
         if (N <=1) {
             return N;
         } else {
-            return  fib(N - 1) + fib(N - 2);
-
+            return  fib1(N - 1) + fib1(N - 2);
         }
+    }
+    //dp
+    public int fib2(int n){
+        int []dp =new int[n+1];
+        dp[2]=1;
+        dp[1]=1;
+        for (int i=3;i<=n;i++){
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+        return dp[n];
+
     }
 }
