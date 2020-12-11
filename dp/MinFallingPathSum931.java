@@ -24,6 +24,7 @@ public class MinFallingPathSum931 {
     public int minFallingPathSum1(int[][] A) {
         //原地修改
         int N = A.length;
+        //注意--r  --c
         for (int r = N - 2; r >= 0; --r) {
             for (int c = 0; c < N; ++c) {
                 // best = min(A[r+1][c-1], A[r+1][c], A[r+1][c+1])
