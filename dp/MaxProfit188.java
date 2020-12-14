@@ -8,7 +8,7 @@
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  *
  *       股票问题系列  121    122        123    188  309    714   解题思路整理
- *  *  * https://leetcode-cn.com/circle/article/qiAgHn/
+ *  *  *https://leetcode-cn.com/circle/article/qiAgHn/
  */
 public class MaxProfit188 {
     public int maxProfit(int k, int[] prices) {
