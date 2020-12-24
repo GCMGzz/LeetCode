@@ -22,7 +22,7 @@
 注意：负数在计算机中用补码进行操作。 例如，7-5=2。相当于计算，0000-0111(7) + 1111-1011(-5)。最后求得结果为0000-0010
 
 */
-public class GetSum {
+public class GetSum371 {
     public int getSum(int a, int b) {
         while (b!=0){
             int temp = a^b;
